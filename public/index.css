@@ -1,14 +1,98 @@
-#img {
+body {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color:  #333334;  
+}
+h1, p, ol, li, div {
   display: block;
-  margin: auto;
-  height: 128px;
-  width: 128px;
-  padding: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.main-grid {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  align-items: stretch;
+  border: 1px solid #067BBB;
+  margin: 1rem auto 1.5rem;
+  width: 70rem;
+}
+.main-item {
+  padding: 0.7rem;
+}
+.doneby-grid1, .menu-grid {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  border: 1px solid red;
+
+}
+.doneby-grid2 {
+  display: flex;
+  flex-direction: column; 
+  justify-content:flex-start;
+  align-items: stretch;
+  align-content: flex-start;  
+  flex: 1 1 auto;
+  border: 1px solid green;
+  margin-right: 0.5rem;
+}
+.doneby-item {
+  border: 1px solid purple;
+  flex: 1 1 auto;
+}
+.menu-item {
+  flex-grow: 1;
+  text-align: center;
+  border: 1px solid peru;
+  margin-right: 0.5rem;
+}
+.menu-item:last-child, .doneby-grid2:last-child{
+  margin-right: 0;
+}
+fieldset {
+  display: flex;
+  flex-direction: column; 
+  justify-content:space-around;
+  align-items: stretch;
+  margin: 0;
+  padding: 0.7rem;
+  border: 2px solid #067BBB;  
+  border-radius: 0.5rem;
+}
+.fs-header-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+}
+.fs-header-item{
+  width: 100px;
+  border: 1px solid #067BBB;
+  border-right: none;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.fs-header-item:first-child{
+  border: none;
+  border-bottom: 1px solid #067BBB;
+}
+.fs-header-item:last-child{
+  border-right: 1px solid #067BBB;
+}
+.fs-row-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+}
+.fs-row-item{
+  text-align: center;
+  width: 100px;
+}
+.fs-header-item:nth-child(1), .fs-row-item:nth-child(1) {
+  flex: 1 1 auto;
+  text-align: left;
 }
 
-#canvas {
-  display: block;
-  margin: 2rem auto;
-  width: 540px;
-  height: 540px;
-}
