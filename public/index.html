@@ -11,10 +11,14 @@
   <body>
     <script type="module" src="/dist/index.js"></script>
 
-    <main>
-      <div class="main-grid"> 
-        <h1 class="main-item">Titol</h1>
-
+    <main class="main-grid">
+      <h1 class="main-item" id="title">Titol</h1>
+      <section id="key-project">
+        <div class="main-item">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odit blanditiis at magni earum ipsam atque laboriosam error, incidunt ipsa, nemo, aliquid dolorem. Nulla inventore similique non magnam tempore modi!</p>
+        </div>
+      </section>
+      <section id="done-by">
         <div class="main-item">  
           <div class="doneby-grid1">
             <div class="doneby-grid2">
@@ -47,15 +51,19 @@
             <div class="doneby-grid2"><p class="doneby-item">Hora:</p><input class="doneby-item" type="time"></div>
           </div>    
         </div>  
-
+      </section>
+      <section id="menu">
         <div class="main-item">
-          <ol class="menu-grid">
-            <li class="menu-item">Uso adecuado de EPI's</li>
-            <li class="menu-item">Normas de higiene personal</li>
-            <li class="menu-item">Aspectos organizativos e instalaciones</li>
-          </ol>          
+          <div class="menu-grid">
+            <label class="menu-item"><a id="a-key">Key Project</a></label>
+            <label class="menu-item"><a id="a-epis">Uso adecuado de EPI's</a></label>
+            <label class="menu-item"><a id="a-personal">Normas de higiene personal</a></label>
+            <label class="menu-item"><a id="a-instalaciones">Aspectos organizativos e instalaciones</a></label>
+            <label class="menu-item"><a id="a-enviar">Enviar</a></label>
+          </div>
         </div>
-        
+      </section>
+      <section id="uso-adecuado-epis">
         <div class="main-item">  
           <fieldset class="fs-grid">
             <legend>Higiene</legend>
@@ -68,24 +76,24 @@
             </div>
             <div class="fs-row-grid">
               <div class="fs-row-item">Guantes, Bata, Delantal, Manguitos, Gorro, Prot.ocular, M.Q, FPP2</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p1" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p1" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p1" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p1" checked /><span></span></label>                       
+              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p1" /></label>
+              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p1" /></label>
+              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p1" /></label>
+              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p1" checked/></label>                       
             </div>
             <div class="fs-row-grid">
               <div class="fs-row-item">Se cambia guantes entre paciente y paciente</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p2" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p2" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p2" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p2" checked /><span></span></label>                       
+              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p2" /></label>
+              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p2" /></label>
+              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p2" /></label>
+              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p2" checked /></label>                       
             </div>
             <div class="fs-row-grid">
               <div class="fs-row-item">Se cambia delantal y manguitos entre paciente y paciente cuando ha existido contacto físico</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p3" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p3" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p3" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p3" checked /><span></span></label>                       
+              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p3" /></label>
+              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p3" /></label>
+              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p3" /></label>
+              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p3" checked /></label>                       
             </div>
           </fieldset>    
         </div>  
@@ -102,30 +110,48 @@
             </div>
             <div class="fs-row-grid">
               <div class="fs-row-item">Guantes, Bata, Delantal, Manguitos, Gorro, Prot.ocular, M.Q, FPP2</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p1" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p1" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p1" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p1" checked /><span></span></label>                       
+              <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p1" /></label>
+              <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p1" /></label>
+              <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p1" /></label>
+              <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p1" checked /></label>                       
             </div>
             <div class="fs-row-grid">
               <div class="fs-row-item">Se cambia guantes entre paciente y paciente</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p2" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p2" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p2" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p2" checked /><span></span></label>                       
+              <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p2" /></label>
+              <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p2" /></label>
+              <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p2" /></label>
+              <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p2" checked /></label>                       
             </div>
             <div class="fs-row-grid">
               <div class="fs-row-item">Se cambia delantal y manguitos entre paciente y paciente cuando ha existido contacto físico</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p3" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p3" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p3" /><span></span></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p3" checked /><span></span></label>                       
+              <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p3" /></label>
+              <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p3" /></label>
+              <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p3" /></label>
+              <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p3" checked /></label>                       
+            </div>
+            <div class="comment-grid">
+              <div class="comment-item">Observaciones</div>                
+              <textarea class="comment-item" rows="3"></textarea>                
             </div>
           </fieldset>    
-
-
         </div>
-      </div>        
+      </section>    
+
+
+      <section id="higiene-personal">
+        <div class="main-item">
+          <p>HIGIENE-PERSONAL. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odit blanditiis at magni earum ipsam atque laboriosam error, incidunt ipsa, nemo, aliquid dolorem. Nulla inventore similique non magnam tempore modi!</p>
+        </div>
+      </section>
+
+      <section id="instalaciones">
+        <div class="main-item">
+          <p>INSTALACIONES. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odit blanditiis at magni earum ipsam atque laboriosam error, incidunt ipsa, nemo, aliquid dolorem. Nulla inventore similique non magnam tempore modi!</p>
+        </div>
+      </section>
+
+
+
     </main>
   </body>
 </html>
