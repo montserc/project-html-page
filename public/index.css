@@ -1,4 +1,4 @@
-body, select, textarea, button, input:not([type="radio"]) {
+body, select, textarea, input:not([type="radio"]) {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: #333334;  
   font-size: 1rem;
@@ -7,8 +7,23 @@ h1, p, div, option, label, textarea, input {
   margin: 0;
   padding: 0;
 }
-select {
+select, input:not([type="radio"]) {
   background-color: #CEDEE5;
+}
+p:not(.doneby-item) {
+  padding-bottom: 1.25rem;
+}
+label.doneby-item{
+  display: block;
+  padding: 0.15rem;
+}
+img {
+  max-height: 100%;
+  min-width: 100%;
+  /*object-fit: cover;*/
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 input[type="radio"] {
   appearance: none;
@@ -36,8 +51,8 @@ textarea  {
   border: 1px solid #0072CE;
   border-radius: 0.5rem; 
 }
-textarea:focus { 
-  outline: 2px solid #0072CE;  
+textarea:focus, select:focus, input:focus { 
+  outline: 1.5px solid #0072CE;  
 }
 
 /* FLEXBOX */
@@ -54,29 +69,26 @@ textarea:focus {
 .main-item {
   padding: 0.7rem;
 }
-.doneby-grid1, .menu-grid {
+.doneby-gridrow, .menu-grid {
   display: flex;
   flex-direction: row; 
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   justify-content: flex-start;
   align-items: stretch;
 }
-.doneby-grid2 {
+.doneby-gridcol {
   display: flex;
   flex-direction: column; 
   justify-content:flex-start;
   align-items: stretch;
-  align-content: flex-start;  
-  flex: 1 1 auto;
+  /*align-content: flex-start;*/
+  flex: 1 0 auto;
   margin-right: 0.5rem;
 }
 .doneby-item {
   border: 1px solid #0072CE;
   border-bottom: 0;
-  flex: 1 1 auto;
-}
-p.doneby-item {
-  padding-left: 0.25rem;
+  flex: 1 0 auto;
 }
 .doneby-item:last-child {
   border-bottom: 1px solid #0072CE;
@@ -86,11 +98,24 @@ p.doneby-item {
   text-align: center;
   border: 1px solid #ff6633;
   margin-right: 0.5rem;
+  padding: 0.15rem;
+  color: #005577;
 }
-.menu-item:last-child, .doneby-grid2:last-child{
+.menu-item:last-child, .doneby-gridcol:last-child{
   margin-right: 0;
 }
-fieldset {
+.menu-item:hover {
+  outline: 1.5px solid #ff6633; 
+}
+.menu-item-clicked {
+  font-weight: bold;
+  background: #fff0e0;
+}
+.menu-item-unclicked {
+  font-weight: normal;
+  background: #FFF;
+}
+fieldset, .fs-grid {
   display: flex;
   flex-direction: column; 
   justify-content:space-around;
@@ -139,9 +164,12 @@ legend {
   width: 100px;
 }
 .fs-header-item:nth-child(1), .fs-row-item:nth-child(1), .comment-item:last-child {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   text-align: left;
 }
 .comment-item {
   padding-right: 0.5rem;
+}
+#title {
+  color: #005577;
 }

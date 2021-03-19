@@ -12,46 +12,8 @@
     <script type="module" src="/dist/index.js"></script>
 
     <main class="main-grid">
-      <h1 class="main-item" id="title">Titol</h1>
-      <section id="key-project">
-        <div class="main-item">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odit blanditiis at magni earum ipsam atque laboriosam error, incidunt ipsa, nemo, aliquid dolorem. Nulla inventore similique non magnam tempore modi!</p>
-        </div>
-      </section>
-      <section id="done-by">
-        <div class="main-item">  
-          <div class="doneby-grid1">
-            <div class="doneby-grid2">
-              <p class="doneby-item">Unitat d'Infermeria: </p>
-              <select class="doneby-item" name="unit">
-                <option value="">Selecciona una Unitat</option>
-                <option value="GR1">Gregal 1</option>
-                <option value="GR1">Gregal 2</option>
-                <option value="LL1">Llevant 1</option>
-                <option value="XL1">Xaloc 1</option>
-              </select>
-            </div>
-            <div class="doneby-grid2">
-              <p class="doneby-item">Realitzat per: </p>
-              <select class="doneby-item" name="done-by">
-                <option value="GR1">Pepito</option>
-                <option value="GR1">Montse</option>
-                <option value="LL1">Pere</option>
-              </select>
-            </div>
-            <div class="doneby-grid2">
-              <p class="doneby-item">Torn: </p>
-              <select class="doneby-item" name="??">
-                <option value="mati">Matí</option>
-                <option value="tarda">Tarda</option>
-                <option value="nit">Nit</option>
-              </select>
-            </div>  
-            <div class="doneby-grid2"><p class="doneby-item">Data:</p><input class="doneby-item" type="date"></div>
-            <div class="doneby-grid2"><p class="doneby-item">Hora:</p><input class="doneby-item" type="time"></div>
-          </div>    
-        </div>  
-      </section>
+      <h1 class="main-item" id="title">a big HTML page</h1>
+
       <section id="menu">
         <div class="main-item">
           <div class="menu-grid">
@@ -63,6 +25,62 @@
           </div>
         </div>
       </section>
+
+      <section id="key-project" class="main-item">
+        <fieldset class="fs-grid">
+          <legend>Professional HTML Page</legend>
+          <p>            
+            The goal of this project is to write a big HTML page (only one page, not a website), that has a lot of structure
+            and styles. This will make you investigate particular ways of doing things and certain tags and CSS properties,
+            etc. Make it as big as you like, the idea is to invest in knowing the web platform more deeply. Challenge yourself
+            to do what you don’t know. The theme of the page is free.            
+          </p>  
+          <p>
+            Aprovechando que...
+          </p>
+          <a href="">Auditoria Covid-19 en format Excel</a>          
+
+        </fieldset>
+      </section>
+      
+      <section id="empty"></section>  
+      
+      <section id="done-by">
+        <div class="main-item">  
+          <div class="doneby-gridrow">
+            <div class="doneby-gridcol">
+              <label class="doneby-item">Unitat d'Infermeria: </label>
+              <select class="doneby-item" name="unit">
+                <option value=""></option>
+                <option value="GR1">Gregal 1</option>
+                <option value="GR1">Gregal 2</option>
+                <option value="LL1">Llevant 1</option>
+                <option value="XL1">Xaloc 1</option>
+              </select>              
+            </div>
+            <div class="doneby-gridcol">
+              <label class="doneby-item">Realitzat per: </label>
+              <select class="doneby-item" name="done-by">
+                <option value=""></option>
+                <option value="Nom1">Nom1 Cognoms1</option>
+                <option value="Nom2">Nom2 Cognoms2</option>
+              </select>
+            </div>
+            <div class="doneby-gridcol">
+              <label class="doneby-item">Torn: </label>
+              <select class="doneby-item" name="??">
+                <option value=""></option>
+                <option value="mati">Matí</option>
+                <option value="tarda">Tarda</option>
+                <option value="nit">Nit</option>
+              </select>
+            </div>  
+            <div class="doneby-gridcol"><label class="doneby-item">Data:</label><input class="doneby-item" type="date"></div>
+            <div class="doneby-gridcol"><label class="doneby-item">Hora:</label><input class="doneby-item" type="time"></div>
+          </div>    
+        </div>  
+      </section>
+
       <section id="uso-adecuado-epis">
         <div class="main-item">  
           <fieldset class="fs-grid">
