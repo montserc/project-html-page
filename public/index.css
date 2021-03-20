@@ -1,40 +1,41 @@
-body, select, textarea, input:not([type="radio"]) {
+
+html, body, .main-grid {
+	height: 100%;
+}
+body {
+  overflow: hidden;
+	margin: 0;
+}
+body, textarea, select, input:not([type="radio"]) {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: #333334;  
   font-size: 1rem;
 }
-h1, p, div, option, label, textarea, input {
+h1 {
   margin: 0;
-  padding: 0;
+  color: #005577;
+}
+section, div.footer-grid {
+  padding: 0.7rem;
 }
 select, input:not([type="radio"]) {
   background-color: #CEDEE5;
 }
-p:not(.doneby-item) {
-  padding-bottom: 1.25rem;
-}
-label.doneby-item{
-  display: block;
+label.doneby-item {
   padding: 0.15rem;
-}
-img {
-  max-height: 100%;
-  min-width: 100%;
-  /*object-fit: cover;*/
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: 0.3s;
 }
 input[type="radio"] {
   appearance: none;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   background: white;
   box-shadow: inset 0 0 0 .2em white, 0 0 0 .15em;
   border-radius: 50%;
   transition: .2s;
   cursor:pointer;
   color: #777778;
+  margin: 0;
+  padding: 0;
 }
 input[type="radio"]:hover {
   background: #777778;
@@ -44,10 +45,10 @@ input[type="radio"]:checked {
   background:  #0072CE;
   box-shadow: inset 0 0 0 .2em white, 0 0 0 .15em #69B3E7;
 } 
-input[type="radio"]:focus { outline: 0; }
-
+input[type="radio"]:focus { 
+  outline: 0; 
+}
 textarea  {
-  background-color: #FFF;
   border: 1px solid #0072CE;
   border-radius: 0.5rem; 
 }
@@ -62,13 +63,25 @@ textarea:focus, select:focus, input:focus {
   justify-content: flex-start;
   align-items: stretch;
   border: 1px solid #0072CE;
-  margin: 1rem 10% 1.5rem;
+  margin: 1rem 10%;
+  overflow: hidden;
   /*margin: 1rem auto 1.5rem;*/
   /*width: 70rem;*/
 }
-.main-item {
-  padding: 0.7rem;
+.main-grid > .header-grid {
+  height: 125px;
 }
+.main-grid > .footer-grid {
+  height: 50px;
+}
+.main-grid > .content-grid {
+  flex: 1 1 auto;
+  overflow-y: scroll;
+}
+/*.main-grid > * {
+  overflow-y: scroll;
+}
+*/
 .doneby-gridrow, .menu-grid {
   display: flex;
   flex-direction: row; 
@@ -82,45 +95,57 @@ textarea:focus, select:focus, input:focus {
   justify-content:flex-start;
   align-items: stretch;
   /*align-content: flex-start;*/
-  flex: 1 0 auto;
+  /*flex: 1 1 auto;*/
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
   margin-right: 0.5rem;
 }
 .doneby-item {
+  /*flex: 1 0 auto;*/
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
   border: 1px solid #0072CE;
   border-bottom: 0;
-  flex: 1 0 auto;
 }
 .doneby-item:last-child {
   border-bottom: 1px solid #0072CE;
 }
-.menu-item {
+.menu-grid > a {
+/*.menu-item {*/  
+  /*flex: 1 1 auto;*/
   flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
   text-align: center;
-  border: 1px solid #ff6633;
+  border: 1px solid #FF6633;
   margin-right: 0.5rem;
-  padding: 0.15rem;
-  color: #005577;
+  padding: 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
-.menu-item:last-child, .doneby-gridcol:last-child{
+.menu-grid > a:last-child, .doneby-gridcol:last-child {
   margin-right: 0;
 }
-.menu-item:hover {
-  outline: 1.5px solid #ff6633; 
+.menu-grid > a:hover {
+  background-color: #FF6633;
+  color: #FFF;
 }
-.menu-item-clicked {
-  font-weight: bold;
-  background: #fff0e0;
+.clicked {
+  background-color: #FF6633;
+  color: #FFF;
 }
-.menu-item-unclicked {
-  font-weight: normal;
-  background: #FFF;
+.unclicked {
+  background-color:  #FFF;
+  color: #FF6633;
 }
 fieldset, .fs-grid {
   display: flex;
   flex-direction: column; 
   justify-content:space-around;
   align-items: stretch;
-  margin: 0;
+  margin: 0 0 0.7rem;
   padding: 0.7rem;
   border: 2px solid #0072CE;  
   border-radius: 0.5rem;
@@ -170,6 +195,90 @@ legend {
 .comment-item {
   padding-right: 0.5rem;
 }
-#title {
+
+
+
+.fs-row-item > span {
+  font-weight: bold;  
+  padding-right: 0.5rem;
+}
+.fs-row-item > span.unchecked {
+  color:red;
+}
+.fs-row-item > span.checked {
+  color:green;
+}
+
+
+
+
+/*Excel*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+
+/*
+img {
+  max-height: 75%;
+}
+*/
+#key-project > a {
   color: #005577;
+}
+#key-project > a:hover {
+  font-weight: bold;
+}
+
+
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+  display: none; /* Default to hidden */
+  position: fixed; /* Overlay entire screen */
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1em; /* A bit of padding around image */
+  background: rgba(0, 0, 0, 0.5); /* Translucent background */
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  display: block;
+}
+
+.lightbox span {
+  /* Full width and height */
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /* Size and position background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;  
+}
+span {
+  text-align: center;
 }

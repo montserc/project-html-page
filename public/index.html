@@ -11,78 +11,94 @@
   <body>
     <script type="module" src="/dist/index.js"></script>
 
-    <main class="main-grid">
-      <h1 class="main-item" id="title">a big HTML page</h1>
-
-      <section id="menu">
-        <div class="main-item">
+    <main class="main-grid">  
+    
+      <div class="header-grid">
+        <section><h1 id="title">a big HTML page</h1></section>
+        <section id="menu">
           <div class="menu-grid">
-            <label class="menu-item"><a id="a-key">Key Project</a></label>
-            <label class="menu-item"><a id="a-epis">Uso adecuado de EPI's</a></label>
-            <label class="menu-item"><a id="a-personal">Normas de higiene personal</a></label>
-            <label class="menu-item"><a id="a-instalaciones">Aspectos organizativos e instalaciones</a></label>
-            <label class="menu-item"><a id="a-enviar">Enviar</a></label>
+            <a id="a-key" class="clicked">Key Project</a>
+            <a id="a-epis" class="unclicked">Uso adecuado de EPI's</a>
+            <a id="a-personal" class="unclicked">Normas de higiene personal</a>
+            <a id="a-instalaciones"class="unclicked">Aspectos organizativos e instalaciones</a>
+            <a id="a-enviar"class="unclicked">Enviar</a>
           </div>
-        </div>
-      </section>
-
-      <section id="key-project" class="main-item">
-        <fieldset class="fs-grid">
-          <legend>Professional HTML Page</legend>
-          <p>            
-            The goal of this project is to write a big HTML page (only one page, not a website), that has a lot of structure
-            and styles. This will make you investigate particular ways of doing things and certain tags and CSS properties,
-            etc. Make it as big as you like, the idea is to invest in knowing the web platform more deeply. Challenge yourself
-            to do what you don’t know. The theme of the page is free.            
-          </p>  
-          <p>
-            Aprovechando que...
-          </p>
-          <a href="">Auditoria Covid-19 en format Excel</a>          
-
-        </fieldset>
-      </section>
+        </section>
+      </div>
       
-      <section id="empty"></section>  
-      
-      <section id="done-by">
-        <div class="main-item">  
+      <div class="content-grid">
+
+        <section id="done-by">
           <div class="doneby-gridrow">
             <div class="doneby-gridcol">
-              <label class="doneby-item">Unitat d'Infermeria: </label>
-              <select class="doneby-item" name="unit">
+              <label class="doneby-item">Unidad de Enfermeria:</label>
+              <select class="doneby-item" name="ue">
                 <option value=""></option>
-                <option value="GR1">Gregal 1</option>
-                <option value="GR1">Gregal 2</option>
-                <option value="LL1">Llevant 1</option>
-                <option value="XL1">Xaloc 1</option>
-              </select>              
+                <option value="ue1">Unidad de Enfermeria 1</option>
+                <option value="ue2">Unidad de Enfermeria 2</option>
+                <option value="ue3">Unidad de Enfermeria 3</option>
+                <option value="ue4">Unidad de Enfermeria 4</option>
+              </select>            
             </div>
             <div class="doneby-gridcol">
-              <label class="doneby-item">Realitzat per: </label>
-              <select class="doneby-item" name="done-by">
+              <label class="doneby-item">Realitzado por:</label>
+              <select class="doneby-item" name="nombre">
                 <option value=""></option>
-                <option value="Nom1">Nom1 Cognoms1</option>
-                <option value="Nom2">Nom2 Cognoms2</option>
+                <option value="nombre1">Nombre1 Apellidos1</option>
+                <option value="nombre2">Nombre2 Apellidos2</option>
+                <option value="nombre3">Nombre3 Apellidos2</option>
               </select>
             </div>
             <div class="doneby-gridcol">
-              <label class="doneby-item">Torn: </label>
-              <select class="doneby-item" name="??">
+              <label class="doneby-item">Turno:</label>
+              <select class="doneby-item" name="turno" >
                 <option value=""></option>
-                <option value="mati">Matí</option>
-                <option value="tarda">Tarda</option>
-                <option value="nit">Nit</option>
+                <option value="mañana">Mañana</option>
+                <option value="tarde">Tarde</option>
+                <option value="noche">Noche</option>
               </select>
             </div>  
-            <div class="doneby-gridcol"><label class="doneby-item">Data:</label><input class="doneby-item" type="date"></div>
-            <div class="doneby-gridcol"><label class="doneby-item">Hora:</label><input class="doneby-item" type="time"></div>
+            <div class="doneby-gridcol">
+              <label class="doneby-item">Data:</label>
+              <input class="doneby-item" type="date" min="2021-03-01" max="2021-06-30">
+            </div>
+            <div class="doneby-gridcol">
+              <label class="doneby-item">Hora:</label>
+              <input class="doneby-item" type="time">
+            </div>
           </div>    
-        </div>  
-      </section>
+        </section>
+        
+        <section id="key-project">
+          <fieldset class="fs-grid">
+            <legend>Professional HTML Page</legend>
+            <p>            
+              The goal of this project is to write a big HTML page (only one page, not a website), that has a lot of structure
+              and styles. This will make you investigate particular ways of doing things and certain tags and CSS properties,
+              etc. Make it as big as you like, the idea is to invest in knowing the web platform more deeply. Challenge yourself
+              to do what you don’t know. The theme of the page is free.            
+            </p>  
+          </fieldset>
+          <fieldset class="fs-grid">  
+            <legend>My choise</legend>
+            <p>
+              Aprovechando que...
+            </p>
+            <a href="#imagen">Opció 1. Auditoria Covid-19 en format Excel</a>
+            <a href="" class="lightbox" id="imagen">
+                <span><img src="/dist/auditoria-excel.jpg" alt="Auditoria en Excel"></span>
+            </a>
+            <a href="" id='a-imagen'>Opcio 2. Auditoria Covid-19 en format Excel</a>
+            <div id="img-view" class="modal">
+              <div class="modal-content">            
+                <img src="/dist/auditoria-excel.jpg" id="imagen" alt="Auditoria en Excel">
+              </div>
+            </div>
+            
+          </fieldset>
+        </section>
 
-      <section id="uso-adecuado-epis">
-        <div class="main-item">  
+        <section id="uso-epis">
           <fieldset class="fs-grid">
             <legend>Higiene</legend>
             <div class="fs-header-grid">
@@ -93,30 +109,28 @@
               <div class="fs-header-item">No aplica</div>
             </div>
             <div class="fs-row-grid">
-              <div class="fs-row-item">Guantes, Bata, Delantal, Manguitos, Gorro, Prot.ocular, M.Q, FPP2</div>
+              <div class="fs-row-item"><span id="higiene-p1" class="unchecked">&#10008;</span>Bata, Delantal, Manguitos, Gorro, Prot.ocular, M.Q, FPP2</div>
               <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p1" /></label>
               <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p1" /></label>
               <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p1" checked/></label>                       
+              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p1" /></label>                       
             </div>
             <div class="fs-row-grid">
-              <div class="fs-row-item">Se cambia guantes entre paciente y paciente</div>
+              <div class="fs-row-item"><span id="higiene-p2" class="unchecked">&#10008;</span>Se cambia guantes entre paciente y paciente</div>
               <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p2" /></label>
               <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p2" /></label>
               <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p2" checked /></label>                       
+              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p2" /></label>                       
             </div>
             <div class="fs-row-grid">
-              <div class="fs-row-item">Se cambia delantal y manguitos entre paciente y paciente cuando ha existido contacto físico</div>
+              <div class="fs-row-item"><span id="higiene-p3" class="unchecked">&#10008;</span>Se cambia delantal y manguitos entre paciente y paciente cuando ha existido contacto físico</div>
               <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p3" /></label>
               <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p3" /></label>
               <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p3" checked /></label>                       
+              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p3" /></label>                       
             </div>
           </fieldset>    
-        </div>  
 
-        <div class="main-item">  
           <fieldset class="fs-grid">
             <legend>Vestir</legend>
             <div class="fs-header-grid">
@@ -127,21 +141,21 @@
               <div class="fs-header-item">No aplica</div>
             </div>
             <div class="fs-row-grid">
-              <div class="fs-row-item">Guantes, Bata, Delantal, Manguitos, Gorro, Prot.ocular, M.Q, FPP2</div>
+              <div class="fs-row-item"><span id="vestir-p1" class="unchecked">&#10008;</span>Guantes, Bata, Delantal, Manguitos, Gorro, Prot.ocular, M.Q, FPP2</div>
               <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p1" /></label>
               <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p1" /></label>
               <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p1" /></label>
               <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p1" checked /></label>                       
             </div>
             <div class="fs-row-grid">
-              <div class="fs-row-item">Se cambia guantes entre paciente y paciente</div>
+              <div class="fs-row-item"><span id="vestir-p2" class="unchecked">&#10008;</span>Se cambia guantes entre paciente y paciente</div>
               <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p2" /></label>
               <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p2" /></label>
               <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p2" /></label>
               <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p2" checked /></label>                       
             </div>
             <div class="fs-row-grid">
-              <div class="fs-row-item">Se cambia delantal y manguitos entre paciente y paciente cuando ha existido contacto físico</div>
+              <div class="fs-row-item"><span id="vestir-p3" class="unchecked">&#10008;</span>Se cambia delantal y manguitos entre paciente y paciente cuando ha existido contacto físico</div>
               <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p3" /></label>
               <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p3" /></label>
               <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p3" /></label>
@@ -152,24 +166,21 @@
               <textarea class="comment-item" rows="3"></textarea>                
             </div>
           </fieldset>    
-        </div>
-      </section>    
-
-
-      <section id="higiene-personal">
-        <div class="main-item">
+        </section>    
+        <section id="higiene-personal">
           <p>HIGIENE-PERSONAL. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odit blanditiis at magni earum ipsam atque laboriosam error, incidunt ipsa, nemo, aliquid dolorem. Nulla inventore similique non magnam tempore modi!</p>
-        </div>
-      </section>
-
-      <section id="instalaciones">
-        <div class="main-item">
+        </section>
+        <section id="instalaciones">
           <p>INSTALACIONES. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odit blanditiis at magni earum ipsam atque laboriosam error, incidunt ipsa, nemo, aliquid dolorem. Nulla inventore similique non magnam tempore modi!</p>
-        </div>
-      </section>
-
-
-
+        </section>
+        <section id="enviar">
+          <p>INSTALACIONES. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odit blanditiis at magni earum ipsam atque laboriosam error, incidunt ipsa, nemo, aliquid dolorem. Nulla inventore similique non magnam tempore modi!</p>
+        </section>
+      </div>  
+      
+      <div class="footer-grid">
+        <p>Full Stacks ...</p>
+      </div>
     </main>
   </body>
 </html>
