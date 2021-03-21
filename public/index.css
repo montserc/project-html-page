@@ -8,14 +8,14 @@ body {
 }
 body, textarea, select, input:not([type="radio"]) {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  color: #333334;  
+  color: #334;  
   font-size: 1rem;
 }
 h1 {
   margin: 0;
   color: #005577;
 }
-section, div.footer-grid {
+section {
   padding: 0.7rem;
 }
 select, input:not([type="radio"]) {
@@ -33,13 +33,13 @@ input[type="radio"] {
   border-radius: 50%;
   transition: .2s;
   cursor:pointer;
-  color: #777778;
+  color: #777;
   margin: 0;
   padding: 0;
 }
 input[type="radio"]:hover {
-  background: #777778;
-  box-shadow: inset 0 0 0 .2em white, 0 0 0 .15em #777778;
+  background: #777;
+  box-shadow: inset 0 0 0 .2em white, 0 0 0 .15em #777;
 }
 input[type="radio"]:checked {
   background:  #0072CE;
@@ -57,7 +57,7 @@ textarea:focus, select:focus, input:focus {
 }
 
 /* FLEXBOX */
-.main-grid {
+main.main-grid {
   display: flex;
   flex-direction: column; 
   justify-content: flex-start;
@@ -68,56 +68,59 @@ textarea:focus, select:focus, input:focus {
   /*margin: 1rem auto 1.5rem;*/
   /*width: 70rem;*/
 }
-.main-grid > .header-grid {
-  height: 125px;
+main.main-grid > div.header-grid {
+  height: 115px;
 }
-.main-grid > .footer-grid {
-  height: 50px;
+main.main-grid > div.footer-grid {
+  display: flex;
+  flex-direction: row; 
+  justify-content: stretch;
+  align-items: stretch;
+  height: 35px;
+  padding: 0.3rem 0.7rem;
+  background-color: #0072CE;
 }
-.main-grid > .content-grid {
+main.main-grid > div.footer-grid > span {
+  display: block;
+  flex: 1 1 50%;
+  margin: 0;
+  padding: 0;
+  color: #FFF; 
+  font-size: 0.7rem;
+}
+main.main-grid > div.footer-grid > span:last-child {
+  text-align: right;
+}
+main.main-grid > div.content-grid {
   flex: 1 1 auto;
   overflow-y: scroll;
 }
-/*.main-grid > * {
-  overflow-y: scroll;
-}
-*/
-.doneby-gridrow, .menu-grid {
+div.doneby-gridrow, div.menu-grid {
   display: flex;
   flex-direction: row; 
   /*flex-wrap: wrap;*/
   justify-content: flex-start;
   align-items: stretch;
 }
-.doneby-gridcol {
+div.doneby-gridcol {
   display: flex;
   flex-direction: column; 
   justify-content:flex-start;
   align-items: stretch;
   /*align-content: flex-start;*/
-  /*flex: 1 1 auto;*/
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
+  flex: 1 1 auto;
   margin-right: 0.5rem;
 }
 .doneby-item {
-  /*flex: 1 0 auto;*/
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
+  flex: 1 1 auto;
   border: 1px solid #0072CE;
   border-bottom: 0;
 }
 .doneby-item:last-child {
   border-bottom: 1px solid #0072CE;
 }
-.menu-grid > a {
-/*.menu-item {*/  
-  /*flex: 1 1 auto;*/
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
+div.menu-grid > a {
+  flex: 1 1 auto;
   text-align: center;
   border: 1px solid #FF6633;
   margin-right: 0.5rem;
@@ -125,22 +128,25 @@ textarea:focus, select:focus, input:focus {
   font-size: 1rem;
   font-weight: bold;
 }
-.menu-grid > a:last-child, .doneby-gridcol:last-child {
+div.menu-grid > span {
+  flex: 1 1 60%;
+}
+div.menu-grid > a:last-child, div.doneby-gridcol:last-child {
   margin-right: 0;
 }
-.menu-grid > a:hover {
-  background-color: #FF6633;
+div.menu-grid > a:hover {
+  background-color: #F63;
   color: #FFF;
 }
-.clicked {
-  background-color: #FF6633;
+a.clicked {
+  background-color: #F63;
   color: #FFF;
 }
-.unclicked {
+a.unclicked {
   background-color:  #FFF;
-  color: #FF6633;
+  color: #F63;
 }
-fieldset, .fs-grid {
+fieldset {
   display: flex;
   flex-direction: column; 
   justify-content:space-around;
@@ -157,128 +163,77 @@ legend {
   color: #FFF;
   font-weight: bold;
 }
-.fs-header-grid {
+fieldset > a {
+  color: #0072CE;
+  font-weight: bold;
+}
+fieldset > a:hover {
+  color: #F63;
+}
+fieldset > div.fs-header-grid {
   display: flex;
   flex-direction: row;
   justify-content:space-around;
   align-items: center;
 }
-.fs-header-item{
+div.fs-header-item {
   width: 100px;
   border: 1px solid #0072CE;
   border-right: none;
   text-align: center;
   font-size: 0.9rem;
 }
-.fs-header-item:first-child{
+div.fs-header-item:first-child {
   border: none;
   border-bottom: 1px solid #0072CE;
 }
-.fs-header-item:last-child{
+div.fs-header-item:last-child {
   border-right: 1px solid #0072CE;
 }
-.fs-row-grid, .comment-grid {
+.fs-row-grid, .fs-comment-grid {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 0.15rem;
 }
-.fs-row-item{
+.fs-row-item {
   text-align: center;
   width: 100px;
 }
-.fs-header-item:nth-child(1), .fs-row-item:nth-child(1), .comment-item:last-child {
+div.fs-header-item:nth-child(1), .fs-row-item:nth-child(1), .fs-comment-item:last-child {
   flex: 1 0 auto;
   text-align: left;
 }
-.comment-item {
+.fs-comment-item {
   padding-right: 0.5rem;
 }
-
-
-
 .fs-row-item > span {
   font-weight: bold;  
   padding-right: 0.5rem;
 }
 .fs-row-item > span.unchecked {
-  color:red;
+  color: #F00;
 }
 .fs-row-item > span.checked {
-  color:green;
+  color: #008000;
 }
-
-
-
-
-/*Excel*/
-.modal {
-  display: none;
+a.lightbox {
+  display: none; 
   position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-}
-
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1200px;
-}
-
-
-/*
-img {
-  max-height: 75%;
-}
-*/
-#key-project > a {
-  color: #005577;
-}
-#key-project > a:hover {
-  font-weight: bold;
-}
-
-
-/** LIGHTBOX MARKUP **/
-
-.lightbox {
-  display: none; /* Default to hidden */
-  position: fixed; /* Overlay entire screen */
-  z-index: 999;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 1em; /* A bit of padding around image */
-  background: rgba(0, 0, 0, 0.5); /* Translucent background */
+  padding: 1rem; 
+  background: rgba(0, 0, 0, 0.5);
 }
-
-/* Unhide the lightbox when it's the target */
-.lightbox:target {
+a.lightbox:target {
   display: block;
 }
-
-.lightbox span {
-  /* Full width and height */
+a.lightbox > span {
   display: block;
   width: 100%;
   height: 100%;
-
-  /* Size and position background image */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;  
-}
-span {
   text-align: center;
 }
