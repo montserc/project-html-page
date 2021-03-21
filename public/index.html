@@ -10,10 +10,8 @@
   </head>
   <body>
     <script type="module" src="/dist/index.js"></script>
-
-    <main class="main-grid">  
-    
-      <div class="header-grid">
+    <main class="main-grid">      
+      <header class="header-grid">
         <section><h1 id="title">a big HTML page</h1></section>
         <section id="menu">
           <div class="menu-grid">            
@@ -26,358 +24,408 @@
             <a id="a-enviar"class="unclicked">Enviar</a>
           </div>
         </section>
-      </div>
-      
-      <div class="content-grid">
-        <section id="done-by">
-          <div class="doneby-gridrow">
-            <div class="doneby-gridcol">
-              <label class="doneby-item">Unidad de Enfermeria:</label>
-              <select class="doneby-item" name="ue">
-                <option value=""></option>
-                <option value="ue1">Unidad de Enfermeria 1</option>
-                <option value="ue2">Unidad de Enfermeria 2</option>
-                <option value="ue3">Unidad de Enfermeria 3</option>
-                <option value="ue4">Unidad de Enfermeria 4</option>
-              </select>            
-            </div>
-            <div class="doneby-gridcol">
-              <label class="doneby-item">Realitzado por:</label>
-              <select class="doneby-item" name="nombre">
-                <option value=""></option>
-                <option value="nombre1">Nombre1 Apellidos1</option>
-                <option value="nombre2">Nombre2 Apellidos2</option>
-                <option value="nombre3">Nombre3 Apellidos2</option>
-              </select>
-            </div>
-            <div class="doneby-gridcol">
-              <label class="doneby-item">Turno:</label>
-              <select class="doneby-item" name="turno" >
-                <option value=""></option>
-                <option value="mañana">Mañana</option>
-                <option value="tarde">Tarde</option>
-                <option value="noche">Noche</option>
-              </select>
-            </div>  
-            <div class="doneby-gridcol">
-              <label class="doneby-item">Data:</label>
-              <input class="doneby-item" type="date" min="2021-03-01" max="2021-06-30">
-            </div>
-            <div class="doneby-gridcol">
-              <label class="doneby-item">Hora:</label>
-              <input class="doneby-item" type="time">
-            </div>
-          </div>    
-        </section>
-        
-        <section id="key-project">
-          <fieldset>
-            <legend>Professional HTML Page</legend>
-            <p>            
-              The goal of this project is to write a big HTML page (only one page, not a website), that has a lot of structure
-              and styles. This will make you investigate particular ways of doing things and certain tags and CSS properties,
-              etc. Make it as big as you like, the idea is to invest in knowing the web platform more deeply. Challenge yourself
-              to do what you don’t know. The theme of the page is free.            
-            </p>  
-          </fieldset>
-          <fieldset>  
-            <legend>Mi elección</legend>
-            <p>
-              Aprovechando que...
-            </p>
-            <a href="#imagen">Auditoria Covid-19 en format Excel</a>
-            <a href="" class="lightbox" id="imagen"><span><img src="/dist/auditoria-excel.jpg" alt="Auditoria en Excel"/></span></a>            
-          </fieldset>
-        </section>
+      </header>
+        <div class="content-grid">
+          <form> <!-- pendiente del backend -->      
+            <section id="done-by">
+            <div class="doneby-gridrow">
+              <div class="doneby-gridcol">
+                <label class="doneby-item">Unidad de Enfermeria:</label>
+                <select class="doneby-item" name="ue">
+                  <option value=""></option>
+                  <option value="ue1">Unidad de Enfermeria 1</option>
+                  <option value="ue2">Unidad de Enfermeria 2</option>
+                  <option value="ue3">Unidad de Enfermeria 3</option>
+                  <option value="ue4">Unidad de Enfermeria 4</option>
+                </select>            
+              </div>
+              <div class="doneby-gridcol">
+                <label class="doneby-item">Realitzado por:</label>
+                <select class="doneby-item" name="nombre">
+                  <option value=""></option>
+                  <option value="nombre1">Nombre1 Apellidos1</option>
+                  <option value="nombre2">Nombre2 Apellidos2</option>
+                  <option value="nombre3">Nombre3 Apellidos2</option>
+                </select>
+              </div>
+              <div class="doneby-gridcol">
+                <label class="doneby-item">Turno:</label>
+                <select class="doneby-item" name="turno" >
+                  <option value=""></option>
+                  <option value="mañana">Mañana</option>
+                  <option value="tarde">Tarde</option>
+                  <option value="noche">Noche</option>
+                </select>
+              </div>  
+              <div class="doneby-gridcol">
+                <label class="doneby-item">Data:</label>
+                <input class="doneby-item" type="date" min="2021-03-01" max="2021-06-30">
+              </div>
+              <div class="doneby-gridcol">
+                <label class="doneby-item">Hora:</label>
+                <input class="doneby-item" type="time">
+              </div>
+            </div>    
+          </section>        
+          <section id="key-project">
+            <fieldset>
+              <legend>Professional HTML Page</legend>
+              <p>The goal of this project is to write a big <strong>HTML page</strong> (only one page, not a website), that has a lot of structure
+                and styles. This will make you investigate particular ways of doing things and certain tags and CSS properties,
+                etc. Make it as big as you like, the idea is to invest in knowing the web platform more deeply. Challenge yourself
+                to do what you don’t know. The theme of the page is free.</p>  
+            </fieldset>
+            <fieldset>  
+              <legend>El tema del proyecto</legend>
+              <p>A pesar de que no es ninguna de las tres opciones propuestas, he optado por este ejercicio para empezar a practicar 
+                en la resolución de problemáticas que surgen en mi trabajo. Periodicamente aparece la necesidad de llevar registros  
+                (cribajes, auditorias...) que se realizan habitualmente en Excel. Es el caso de la auditoria <a href="#imagen">Covid-19 en formato Excel</a>  que es la base de este ejercicio.</p>
+              <p>He utilizado:</p>
+              <p><span>&#10004;</span><strong>HTML</strong>: Estructura del contenido de la pagina con los tags main, header, footer y section. Fieldset y legend para definir 
+                y etiquetar grupos lógicos de elementos de formulario. Heading, entities y links.</p>
+              <p><span>&#10004;</span><strong>css</strong>: Flexbox para el posicionamineto de los elementos. Scroll en el contenedor central. Pseudoclases first, last, not, focus...</p>
+              <p><span>&#10004;</span><strong>Javascript</strong>: Array functional methods (map, filter, every). Añadir listeners para el evento click para mostrar, ocultar o cambiar contenido del DOM.</p>
+              <a href="" class="lightbox" id="imagen"><span><img src="/dist/auditoria-excel.jpg" alt="Auditoria en Excel"/></span></a>            
+            </fieldset>
+          </section>
+          <section id="uso-epis">
+            <fieldset>
+              <legend>Higiene</legend>
+              <div class="fs-header-grid">
+                <div class="fs-header-item"></div>
+                <div class="fs-header-item">Aceptable</div>                
+                <div class="fs-header-item">Mejorable</div>
+                <div class="fs-header-item">Deficiente</div>
+                <div class="fs-header-item">No aplica</div>
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="higiene-p1" class="unchecked">&#10008;</span>Bata, Delantal, Manguitos, Gorro, Protector ocular, Mascarilla quirúrgica, FPP2</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p1" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="higiene-p2" class="unchecked">&#10008;</span>Se cambia guantes entre paciente y paciente</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p2" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="higiene-p3" class="unchecked">&#10008;</span>Se cambia delantal y manguitos entre paciente y paciente cuando ha existido contacto físico</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p3" /></label>                       
+              </div>
+              <div class="fs-comment-grid">
+                <div class="fs-comment-item">Observaciones</div>                
+                <textarea class="fs-comment-item" rows="3"></textarea>                
+              </div>
+            </fieldset>    
+            <fieldset>
+              <legend>Vestir</legend>
+              <div class="fs-header-grid">
+                <div class="fs-header-item"></div>
+                <div class="fs-header-item">Aceptable</div>                
+                <div class="fs-header-item">Mejorable</div>
+                <div class="fs-header-item">Deficiente</div>
+                <div class="fs-header-item">No aplica</div>
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="vestir-p1" class="unchecked">&#10008;</span>Bata, Delantal, Manguitos, Gorro, Protector ocular, Mascarilla quirúrgica, FPP2</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p1" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="vestir-p2" class="unchecked">&#10008;</span>Se cambia guantes entre paciente y paciente</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p2" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="vestir-p3" class="unchecked">&#10008;</span>Se cambia delantal y manguitos entre paciente y paciente cuando ha existido contacto físico</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p3" /></label>                       
+              </div>
+              <div class="fs-comment-grid">
+                <div class="fs-comment-item">Observaciones</div>                
+                <textarea class="fs-comment-item" rows="3"></textarea>                
+              </div>
+            </fieldset>    
+            <fieldset>
+              <legend>Mas fieldsets...</legend>
+              <div>Faltaria incluir los fieldsets: Alimentación, Curas, Acompañamiento a deambulación, wc,…, Tareas generales (acceder para dejar alimentación, medicación, ropa, etc., que no requiere contacto con el paciente)</div>
+            </fieldset>    
 
-        <section id="uso-epis">
-          <fieldset>
-            <legend>Higiene</legend>
-            <div class="fs-header-grid">
-              <div class="fs-header-item"></div>
-              <div class="fs-header-item">Aceptable</div>                
-              <div class="fs-header-item">Mejorable</div>
-              <div class="fs-header-item">Deficiente</div>
-              <div class="fs-header-item">No aplica</div>
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="higiene-p1" class="unchecked">&#10008;</span>Bata, Delantal, Manguitos, Gorro, Protector ocular, Mascarilla quirúrgica, FPP2</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p1" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="higiene-p2" class="unchecked">&#10008;</span>Se cambia guantes entre paciente y paciente</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p2" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="higiene-p3" class="unchecked">&#10008;</span>Se cambia delantal y manguitos entre paciente y paciente cuando ha existido contacto físico</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-p3" /></label>                       
-            </div>
-            <div class="fs-comment-grid">
-              <div class="fs-comment-item">Observaciones</div>                
-              <textarea class="fs-comment-item" rows="3"></textarea>                
-            </div>
-          </fieldset>    
-          <fieldset>
-            <legend>Vestir</legend>
-            <div class="fs-header-grid">
-              <div class="fs-header-item"></div>
-              <div class="fs-header-item">Aceptable</div>                
-              <div class="fs-header-item">Mejorable</div>
-              <div class="fs-header-item">Deficiente</div>
-              <div class="fs-header-item">No aplica</div>
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="vestir-p1" class="unchecked">&#10008;</span>Bata, Delantal, Manguitos, Gorro, Protector ocular, Mascarilla quirúrgica, FPP2</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p1" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="vestir-p2" class="unchecked">&#10008;</span>Se cambia guantes entre paciente y paciente</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p2" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="vestir-p3" class="unchecked">&#10008;</span>Se cambia delantal y manguitos entre paciente y paciente cuando ha existido contacto físico</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="vestir-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="vestir-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="vestir-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="vestir-p3" /></label>                       
-            </div>
-            <div class="fs-comment-grid">
-              <div class="fs-comment-item">Observaciones</div>                
-              <textarea class="fs-comment-item" rows="3"></textarea>                
-            </div>
-          </fieldset>    
-        </section>    
-        <section id="higiene-personal">
-          <fieldset>
-            <legend>Higiene personal</legend>
-            <div class="fs-header-grid">
-              <div class="fs-header-item"></div>
-              <div class="fs-header-item">Aceptable</div>                
-              <div class="fs-header-item">Mejorable</div>
-              <div class="fs-header-item">Deficiente</div>
-              <div class="fs-header-item">No aplica</div>
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="higiene-personal-p1" class="unchecked">&#10008;</span>Pelo recogido</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p1" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="higiene-personal-p2" class="unchecked">&#10008;</span>Objetos personales (pulseras, reloj, anillos, etc.)</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p2" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="higiene-personal-p3" class="unchecked">&#10008;</span>Uñas</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p3" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="higiene-personal-p4" class="unchecked">&#10008;</span>Uso de móvil</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p4" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p4" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p4" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p4" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="higiene-personal-p5" class="unchecked">&#10008;</span>Maquillaje</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p5" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p5" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p5" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p5" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="higiene-personal-p6" class="unchecked">&#10008;</span>Uniformidad</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p6" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p6" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p6" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p6" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="higiene-personal-p7" class="unchecked">&#10008;</span>Se realiza higiene de manos entre paciente y paciente</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p7" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p7" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p7" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p7" /></label>                       
-            </div>
-            <div class="fs-comment-grid">
-              <div class="fs-comment-item">Observaciones</div>                
-              <textarea class="fs-comment-item" rows="3"></textarea>                
-            </div>
-          </fieldset>    
-        </section>
-        <section id="instalaciones">
-          <fieldset>
-            <legend>Sala descanso</legend>
-            <div class="fs-header-grid">
-              <div class="fs-header-item"></div>
-              <div class="fs-header-item">Aceptable</div>                
-              <div class="fs-header-item">Mejorable</div>
-              <div class="fs-header-item">Deficiente</div>
-              <div class="fs-header-item">No aplica</div>
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="sala-descanso-p1" class="unchecked">&#10008;</span>Solución hidroalcohólica</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-descanso-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-descanso-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-descanso-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-descanso-p1" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="sala-descanso-p2" class="unchecked">&#10008;</span>Solución desinfectante superficies</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-descanso-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-descanso-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-descanso-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-descanso-p2" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="sala-descanso-p3" class="unchecked">&#10008;</span>Se puede guardar la distancia de seguridad de 2 metros cuando no se puede llevar mascarilla (comidas)</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-descanso-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-descanso-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-descanso-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-descanso-p3" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="sala-descanso-p4" class="unchecked">&#10008;</span>Cartelería (Decálogo, limitación aforo, EPI's)</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-descanso-p4" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-descanso-p4" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-descanso-p4" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-descanso-p4" /></label>                       
-            </div>
-            <div class="fs-comment-grid">
-              <div class="fs-comment-item">Observaciones</div>                
-              <textarea class="fs-comment-item" rows="3"></textarea>                
-            </div>
-          </fieldset>    
-          <fieldset>
-            <legend>Sala EPI's</legend>
-            <div class="fs-header-grid">
-              <div class="fs-header-item"></div>
-              <div class="fs-header-item">Aceptable</div>                
-              <div class="fs-header-item">Mejorable</div>
-              <div class="fs-header-item">Deficiente</div>
-              <div class="fs-header-item">No aplica</div>
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="sala-epis-p1" class="unchecked">&#10008;</span>Dimensiones</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p1" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="sala-epis-p2" class="unchecked">&#10008;</span>Solución hidroalcohólica</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p2" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="sala-epis-p3" class="unchecked">&#10008;</span>Solución desinfectante superficies</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p3" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p3" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="sala-epis-p4" class="unchecked">&#10008;</span>Toallitas desinfectantes</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p4" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p4" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p4" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p4" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="sala-epis-p5" class="unchecked">&#10008;</span>Contenedores residuos adecuados para batas, mascarillas, etc.</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p5" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p5" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p5" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p5" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="sala-epis-p6" class="unchecked">&#10008;</span>Espejo</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p6" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p6" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p6" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p6" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="sala-epis-p7" class="unchecked">&#10008;</span>Uso zona sucia</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p7" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p7" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p7" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p7" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="sala-epis-p8" class="unchecked">&#10008;</span>Uso zona limpia</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p8" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p8" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p8" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p8" /></label>                       
-            </div>
-            <div class="fs-comment-grid">
-              <div class="fs-comment-item">Observaciones</div>                
-              <textarea class="fs-comment-item" rows="3"></textarea>                
-            </div>
-          </fieldset>    
-          <fieldset>
-            <legend>Habitaciones</legend>
-            <div class="fs-header-grid">
-              <div class="fs-header-item"></div>
-              <div class="fs-header-item">Aceptable</div>                
-              <div class="fs-header-item">Mejorable</div>
-              <div class="fs-header-item">Deficiente</div>
-              <div class="fs-header-item">No aplica</div>
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="habitaciones-p1" class="unchecked">&#10008;</span>Señalización adecuada en habitaciones de aislados</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="habitaciones-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="habitaciones-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="habitaciones-p1" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="habitaciones-p1" /></label>                       
-            </div>
-            <div class="fs-row-grid">
-              <div class="fs-row-item"><span id="habitaciones-p2" class="unchecked">&#10008;</span>Se dispone del material de protección necesario para acceder a las habitaciones de aislados</div>
-              <label class="fs-row-item"><input type="radio" value="aceptable" name="habitaciones-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="mejorable" name="habitaciones-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="deficiente" name="habitaciones-p2" /></label>
-              <label class="fs-row-item"><input type="radio" value="noaplica" name="habitaciones-p2" /></label>                       
-            </div>
-            <div class="fs-comment-grid">
-              <div class="fs-comment-item">Observaciones</div>                
-              <textarea class="fs-comment-item" rows="3"></textarea>                
-            </div>
-          </fieldset>    
-        </section>
-        <section id="enviar">
-          <p></p>
-        </section>
-      </div>  
-      
-      <div class="footer-grid">
+            <fieldset>
+              <legend>Terapia ocupacional</legend>
+              <div class="fs-header-grid">
+                <div class="fs-header-item"></div>
+                <div class="fs-header-item">Aceptable</div>                
+                <div class="fs-header-item">Mejorable</div>
+                <div class="fs-header-item">Deficiente</div>
+                <div class="fs-header-item">No aplica</div>
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="to-p1" class="unchecked">&#10008;</span>Bata, Delantal, Manguitos, Gorro, Protector ocular, Mascarilla quirúrgica, FPP2</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="to-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="to-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="to-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="to-p1" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="to-p2" class="unchecked">&#10008;</span>Se cambia guantes entre paciente y paciente</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="to-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="to-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="to-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="to-p2" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="to-p3" class="unchecked">&#10008;</span>Se cambia delantal y manguitos entre paciente y paciente cuando ha existido contacto físico</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="to-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="to-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="to-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="to-p3" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="to-p4" class="unchecked">&#10008;</span>En gimnasio, se pone bata, guantes, etc, a los pacientes</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="to-p4" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="to-p4" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="to-p4" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="to-p4" /></label>                       
+              </div>
+              <div class="fs-comment-grid">
+                <div class="fs-comment-item">Observaciones</div>                
+                <textarea class="fs-comment-item" rows="3"></textarea>                
+              </div>
+            </fieldset>    
+          </section>    
+          <section id="higiene-personal">
+            <fieldset>
+              <legend>Higiene personal</legend>
+              <div class="fs-header-grid">
+                <div class="fs-header-item"></div>
+                <div class="fs-header-item">Aceptable</div>                
+                <div class="fs-header-item">Mejorable</div>
+                <div class="fs-header-item">Deficiente</div>
+                <div class="fs-header-item">No aplica</div>
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="higiene-personal-p1" class="unchecked">&#10008;</span>Pelo recogido</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p1" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="higiene-personal-p2" class="unchecked">&#10008;</span>Objetos personales (pulseras, reloj, anillos, etc.)</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p2" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="higiene-personal-p3" class="unchecked">&#10008;</span>Uñas</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p3" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="higiene-personal-p4" class="unchecked">&#10008;</span>Uso de móvil</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p4" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p4" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p4" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p4" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="higiene-personal-p5" class="unchecked">&#10008;</span>Maquillaje</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p5" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p5" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p5" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p5" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="higiene-personal-p6" class="unchecked">&#10008;</span>Uniformidad</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p6" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p6" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p6" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p6" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="higiene-personal-p7" class="unchecked">&#10008;</span>Se realiza higiene de manos entre paciente y paciente</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="higiene-personal-p7" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="higiene-personal-p7" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="higiene-personal-p7" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="higiene-personal-p7" /></label>                       
+              </div>
+              <div class="fs-comment-grid">
+                <div class="fs-comment-item">Observaciones</div>                
+                <textarea class="fs-comment-item" rows="3"></textarea>                
+              </div>
+            </fieldset>    
+          </section>
+          <section id="instalaciones">
+            <fieldset>
+              <legend>Sala descanso</legend>
+              <div class="fs-header-grid">
+                <div class="fs-header-item"></div>
+                <div class="fs-header-item">Aceptable</div>                
+                <div class="fs-header-item">Mejorable</div>
+                <div class="fs-header-item">Deficiente</div>
+                <div class="fs-header-item">No aplica</div>
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="sala-descanso-p1" class="unchecked">&#10008;</span>Solución hidroalcohólica</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-descanso-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-descanso-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-descanso-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-descanso-p1" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="sala-descanso-p2" class="unchecked">&#10008;</span>Solución desinfectante superficies</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-descanso-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-descanso-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-descanso-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-descanso-p2" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="sala-descanso-p3" class="unchecked">&#10008;</span>Se puede guardar la distancia de seguridad de 2 metros cuando no se puede llevar mascarilla (comidas)</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-descanso-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-descanso-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-descanso-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-descanso-p3" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="sala-descanso-p4" class="unchecked">&#10008;</span>Cartelería (Decálogo, limitación aforo, EPI's)</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-descanso-p4" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-descanso-p4" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-descanso-p4" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-descanso-p4" /></label>                       
+              </div>
+              <div class="fs-comment-grid">
+                <div class="fs-comment-item">Observaciones</div>                
+                <textarea class="fs-comment-item" rows="3"></textarea>                
+              </div>
+            </fieldset>    
+            <fieldset>
+              <legend>Sala EPI's</legend>
+              <div class="fs-header-grid">
+                <div class="fs-header-item"></div>
+                <div class="fs-header-item">Aceptable</div>                
+                <div class="fs-header-item">Mejorable</div>
+                <div class="fs-header-item">Deficiente</div>
+                <div class="fs-header-item">No aplica</div>
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="sala-epis-p1" class="unchecked">&#10008;</span>Dimensiones</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p1" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="sala-epis-p2" class="unchecked">&#10008;</span>Solución hidroalcohólica</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p2" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="sala-epis-p3" class="unchecked">&#10008;</span>Solución desinfectante superficies</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p3" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p3" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="sala-epis-p4" class="unchecked">&#10008;</span>Toallitas desinfectantes</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p4" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p4" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p4" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p4" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="sala-epis-p5" class="unchecked">&#10008;</span>Contenedores residuos adecuados para batas, mascarillas, etc.</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p5" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p5" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p5" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p5" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="sala-epis-p6" class="unchecked">&#10008;</span>Espejo</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p6" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p6" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p6" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p6" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="sala-epis-p7" class="unchecked">&#10008;</span>Uso zona sucia</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p7" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p7" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p7" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p7" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="sala-epis-p8" class="unchecked">&#10008;</span>Uso zona limpia</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="sala-epis-p8" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="sala-epis-p8" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="sala-epis-p8" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="sala-epis-p8" /></label>                       
+              </div>
+              <div class="fs-comment-grid">
+                <div class="fs-comment-item">Observaciones</div>                
+                <textarea class="fs-comment-item" rows="3"></textarea>                
+              </div>
+            </fieldset>    
+            <fieldset>
+              <legend>Habitaciones</legend>
+              <div class="fs-header-grid">
+                <div class="fs-header-item"></div>
+                <div class="fs-header-item">Aceptable</div>                
+                <div class="fs-header-item">Mejorable</div>
+                <div class="fs-header-item">Deficiente</div>
+                <div class="fs-header-item">No aplica</div>
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="habitaciones-p1" class="unchecked">&#10008;</span>Señalización adecuada en habitaciones de aislados</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="habitaciones-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="habitaciones-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="habitaciones-p1" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="habitaciones-p1" /></label>                       
+              </div>
+              <div class="fs-row-grid">
+                <div class="fs-row-item"><span id="habitaciones-p2" class="unchecked">&#10008;</span>Se dispone del material de protección necesario para acceder a las habitaciones de aislados</div>
+                <label class="fs-row-item"><input type="radio" value="aceptable" name="habitaciones-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="mejorable" name="habitaciones-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="deficiente" name="habitaciones-p2" /></label>
+                <label class="fs-row-item"><input type="radio" value="noaplica" name="habitaciones-p2" /></label>                       
+              </div>
+              <div class="fs-comment-grid">
+                <div class="fs-comment-item">Observaciones</div>                
+                <textarea class="fs-comment-item" rows="3"></textarea>                
+              </div>
+            </fieldset>    
+          </section>
+          <section id="enviar">
+            <fieldset>
+              <legend>Resultado</legend>          
+              <div id="resultado"></div>            
+            </fieldset>  
+          </section>
+        </form>
+      </div>        
+      <footer class="footer-grid">
         <span>Posgrado en Full-stack Web Technologies</span>
         <span>Montse Raventós Catasús</span>
-      </div>
+      </footer>
     </main>
   </body>
 </html>

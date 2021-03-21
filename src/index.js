@@ -37,17 +37,27 @@ let displays = [
     }
 ]
 
-document.addEventListener('DOMContentLoaded',function() {
-    render();
-    document.getElementById('a-key').click();
-});
-
 let radios;
-function render() {
+document.addEventListener('DOMContentLoaded',function() {
     radios = Object.values(document.getElementsByTagName('input')).filter((item) => item.type == "radio");
     radios.map(addRadioListener);
     displays.map(displayItem);    
+    document.getElementById('a-key').click();
+});
+
+function addRadioListener (r) {
+    r.addEventListener('click',function(event) {                
+        if(r.checked) {                
+            document.getElementById(r.name).innerHTML = "&#10004;";
+            document.getElementById(r.name).classList.remove('unchecked');
+            document.getElementById(r.name).classList.add('checked');
+        } 
+    });            
 }
+
+function radioGrupChecked (r) {
+    return document.getElementById(r.name).classList.contains('checked');
+ }
 
 function displayItem(dp, icurrent, dps) {    
     let a = document.getElementById(dp.when);
@@ -65,39 +75,20 @@ function displayItem(dp, icurrent, dps) {
         dps.filter((item, index) => index == icurrent).forEach(element => {
             document.getElementById(element.when).classList.remove('unclicked');
             document.getElementById(element.when).classList.add('clicked');
-        }); 
+        });         
+        
+        //Antes de enviar el formulario comprobar si todas las preguntas se han respondido
+        if (dp.when == 'a-enviar' && radios.map(radioGrupChecked).every(r => r == true)) {
+            document.getElementById('resultado').innerText = 'Muy bien! Has rellenado todo el cuestionario.'
+        } 
+        else {
+            document.getElementById('resultado').innerText = 'Cuestionario incompleto.'
+        }
         
         if(dp.when == 'a-bigpage') {
             document.getElementById('a-epis').click();            
         }
         
-        if (dp.when == 'a-enviar' && radios.every(r => r.checked)) {
-            console.log('Si')
-            document.getElementById('enviar').textContent = 'Si'
-        } 
-        else {
-            console.log('No')
-            document.getElementById('enviar').textContent = 'No'
-        }
-        
         document.getElementById('title').textContent = dp.title;        
     });
-}
-
-function addRadioListener (r) {
-    r.addEventListener('click',function(event) {        
-        r.checked = true;
-        if(r.checked) {                
-            document.getElementById(r.name).innerHTML = "&#10004;";
-            document.getElementById(r.name).classList.remove('unchecked');
-            document.getElementById(r.name).classList.add('checked');
-        } 
-        /*
-        else {
-            document.getElementById(r.name).innerHTML="&#10008";                 
-            document.getElementById(r.name).classList.remove('checked');
-            document.getElementById(r.name).classList.add('unchecked');
-        } 
-        */      
-    });            
 }

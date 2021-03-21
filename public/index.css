@@ -55,8 +55,6 @@ textarea  {
 textarea:focus, select:focus, input:focus { 
   outline: 1.5px solid #0072CE;  
 }
-
-/* FLEXBOX */
 main.main-grid {
   display: flex;
   flex-direction: column; 
@@ -65,13 +63,11 @@ main.main-grid {
   border: 1px solid #0072CE;
   margin: 1rem 10%;
   overflow: hidden;
-  /*margin: 1rem auto 1.5rem;*/
-  /*width: 70rem;*/
 }
-main.main-grid > div.header-grid {
+main.main-grid > header.header-grid {
   height: 115px;
 }
-main.main-grid > div.footer-grid {
+main.main-grid > footer.footer-grid {
   display: flex;
   flex-direction: row; 
   justify-content: stretch;
@@ -80,7 +76,7 @@ main.main-grid > div.footer-grid {
   padding: 0.3rem 0.7rem;
   background-color: #0072CE;
 }
-main.main-grid > div.footer-grid > span {
+main.main-grid > footer.footer-grid > span {
   display: block;
   flex: 1 1 50%;
   margin: 0;
@@ -88,7 +84,7 @@ main.main-grid > div.footer-grid > span {
   color: #FFF; 
   font-size: 0.7rem;
 }
-main.main-grid > div.footer-grid > span:last-child {
+main.main-grid > footer.footer-grid > span:last-child {
   text-align: right;
 }
 main.main-grid > div.content-grid {
@@ -98,7 +94,6 @@ main.main-grid > div.content-grid {
 div.doneby-gridrow, div.menu-grid {
   display: flex;
   flex-direction: row; 
-  /*flex-wrap: wrap;*/
   justify-content: flex-start;
   align-items: stretch;
 }
@@ -107,7 +102,6 @@ div.doneby-gridcol {
   flex-direction: column; 
   justify-content:flex-start;
   align-items: stretch;
-  /*align-content: flex-start;*/
   flex: 1 1 auto;
   margin-right: 0.5rem;
 }
@@ -163,11 +157,19 @@ legend {
   color: #FFF;
   font-weight: bold;
 }
-fieldset > a {
+fieldset > p {
+  margin: 0.5rem 0;
+}
+fieldset > p > span {  
+  padding-right: 0.5rem;
+  font-weight: bold;
+  color: #0072CE;  
+}
+fieldset > p > a {
   color: #0072CE;
   font-weight: bold;
 }
-fieldset > a:hover {
+fieldset > p > a:hover {
   color: #F63;
 }
 fieldset > div.fs-header-grid {
